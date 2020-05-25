@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="83646388-f4bf-48e4-96cd-a3dd673dc465" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/ATP-Project-PartA-311286397-303031686.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mazeGenerators/AMazeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mazeGenerators/EmptyMazeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mazeGenerators/IMazeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mazeGenerators/Maze.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mazeGenerators/MyMazeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mazeGenerators/Position.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mazeGenerators/SimpleMazeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/ASearchingAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/AState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/BestFirstSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/BreadthFirstSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/DepthFirstSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/ISearchable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/ISearchingAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/MazeState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/SearchableMaze.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/Solution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../algorithms/mazeGenerators/AMazeGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../algorithms/mazeGenerators/EmptyMazeGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../algorithms/mazeGenerators/IMazeGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../algorithms/mazeGenerators/Maze.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../algorithms/mazeGenerators/MyMazeGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../algorithms/mazeGenerators/Position.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../algorithms/mazeGenerators/SimpleMazeGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../algorithms/search/ASearchingAlgorithm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../algorithms/search/AState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../algorithms/search/BestFirstSearch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../algorithms/search/BreadthFirstSearch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../algorithms/search/DepthFirstSearch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../algorithms/search/ISearchable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../algorithms/search/ISearchingAlgorithm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../algorithms/search/MazeState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../algorithms/search/SearchableMaze.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../algorithms/search/Solution.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1aetQihF6t3q1vF7PCynyfoR4bb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="83646388-f4bf-48e4-96cd-a3dd673dc465" name="Default Changelist" comment="" />
+      <created>1587107872414</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587107872414</updated>
+    </task>
+    <servers />
+  </component>
+</project>
