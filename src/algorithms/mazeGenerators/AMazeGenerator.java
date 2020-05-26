@@ -8,7 +8,7 @@ import java.io.Serializable;
 public abstract class AMazeGenerator implements IMazeGenerator, Serializable {
     @Override
 
-    public abstract Maze generate(int colNum, int rowNum) ;
+    public abstract Maze generate(int rowNum, int colNum) ;
 
     @Override
     public long measureAlgorithmTimeMillis(int colNum, int rowNum) {

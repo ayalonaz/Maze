@@ -33,9 +33,11 @@ public abstract class AState implements Comparable, Serializable {
     @Override
     public boolean equals(Object o){
         if(this==o) return true;
-        if(o==null || getClass() != o.getClass()) return false;
-        AState currentState = (AState)o;
-        return  stateName!=null ? stateName.equals(currentState.toString()) : currentState.toString() == null;
+        if(o==null || getClass() != o.getClass() || this==null) return false;
+        else {
+            boolean sameState=this.toString().equals(((AState)o).toString());
+            return sameState;
+        }
     }
 
     /**

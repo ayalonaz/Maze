@@ -11,9 +11,9 @@ public class SimpleMazeGenerator extends AMazeGenerator implements Serializable 
      * @param rowNum tells number of rows in the maze
      * @return The maze with given size of row and column
      */
-    public Maze generate(int colNum, int rowNum) {
+    public Maze generate(int rowNum, int colNum) {
         Random rand = new Random();
-        Maze simpleMaze = new Maze(colNum,rowNum);
+        Maze simpleMaze = new Maze(rowNum,colNum);
         for(int row=0;row<rowNum;row++){
             for (int col=0;col<colNum;col++){
                 simpleMaze.deleteWall(row,col);

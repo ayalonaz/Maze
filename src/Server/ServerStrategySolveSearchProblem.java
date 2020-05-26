@@ -6,12 +6,7 @@ package Server;
         import IO.MyCompressorOutputStream;
         import algorithms.mazeGenerators.* ;
         import algorithms.search.*;
-        import com.sun.org.apache.xpath.internal.res.XPATHErrorResources_sv;
-
         import java.io.File;
-        import java.nio.file.Files;
-        import java.nio.file.Path;
-        import java.nio.file.Paths;
         import java.util.ArrayList;
         import java.util.Arrays;
 
@@ -51,9 +46,10 @@ public class ServerStrategySolveSearchProblem implements IServerStrategy {
                 if (Arrays.equals((byte[]) obj, myMazeByte)) {
 
                     //ArrayList<AState> sol = getSolutionFromTxt(tempDirectoryPath + "\\" + "solutions" + "\\" + maze_name + k + ".txt");
-                    Solution sol = getSolutionFromTxt(tempDirectoryPath + "\\" + "solutions" + "\\" + maze_name + k + ".txt");
+                    Solution sol1 = getSolutionFromTxt(tempDirectoryPath + "\\" + "solutions" + "\\" + maze_name + k + ".txt");
                     SolutionIsFind = true;
-                    ToClient.writeObject(sol);
+                    ToClient.writeObject(sol1);
+                    break;
 
                 }
             }
@@ -67,10 +63,12 @@ public class ServerStrategySolveSearchProblem implements IServerStrategy {
                 FileOutputStream fileSol = new FileOutputStream(tempDirectoryPath + "\\" + "solutions" + "\\" + maze_name + i + ".txt");
                 ObjectOutputStream objectSol = new ObjectOutputStream(fileSol);
                 SearchableMaze build_sol = new SearchableMaze(the_maze);
-                BestFirstSearch search = new BestFirstSearch();
+                ASearchingAlgorithm search = Configurations.SolvingAlgorithmRead();
+                //                BestFirstSearch search = new BestFirstSearch();
                 Solution sol = search.solve(build_sol);
                 ArrayList<AState> path;
                 path = sol.getSolutionPath();
+                ToClient.writeObject(sol);
                 objectSol.writeObject(sol);
                 objectSol.flush();
                 objectSol.close();

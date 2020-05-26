@@ -45,4 +45,14 @@ public class Solution implements Serializable {
     public void setSolutionState(AState solutionState) {
         this.solutionState = solutionState;
     }
+
+    @Override
+    public String toString() {
+        ArrayList<AState> path = getSolutionPath();
+        String sol="";
+        for(int i=0;i<path.size();i++){
+            sol+=path.get(i)+"\n";
+        }
+        return sol;
+    }
 }

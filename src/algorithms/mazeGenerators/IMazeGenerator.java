@@ -7,7 +7,7 @@ public interface IMazeGenerator {
      * @param rowNum tells number of rows in the maze
      * @return The maze with given size of row and column
      */
-    Maze generate(int colNum,int rowNum);
+    Maze generate(int rowNum,int colNum);
 
     /**
      *

@@ -22,8 +22,8 @@ public class MyMazeGenerator extends AMazeGenerator implements Serializable {
      * @param rowNum tells number of rows in the maze
      * @return Maze that generate randomly
      */
-    public Maze generate(int colNum, int rowNum) {
-        Maze myMaze = new Maze(colNum, rowNum);
+    public Maze generate(int rowNum, int colNum) {
+        Maze myMaze = new Maze(rowNum, colNum);
         if(myMaze==null){
             return null;
         }

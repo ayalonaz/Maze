@@ -2,6 +2,7 @@ package Server;
 
 import java.io.*;
 import IO.MyCompressorOutputStream;
+import algorithms.mazeGenerators.AMazeGenerator;
 import algorithms.mazeGenerators.Maze;
 import algorithms.mazeGenerators.MyMazeGenerator;
 
@@ -15,7 +16,7 @@ public void ServerStrategy(InputStream fromClient, OutputStream ToClient){
      toClient.flush();
      int[] mazeSize=(int[])FromClient.readObject();
 
-        MyMazeGenerator my_maze=new MyMazeGenerator();
+        AMazeGenerator my_maze=Configurations.MazeGenerateRead();
         Maze theMaze=my_maze.generate(mazeSize[1],mazeSize[0]);
         ByteArrayOutputStream out=new ByteArrayOutputStream();
         MyCompressorOutputStream output=new MyCompressorOutputStream(out);

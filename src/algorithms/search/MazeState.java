@@ -23,18 +23,15 @@ public class MazeState extends AState implements Serializable {
             this.position = null;
     }
 
-//    public MazeState() {
-//        super("aba");
-//        this.position = null;
-//    }
-    public MazeState( MazeState m) {
-        super(m.getStateName());
-        this.position = m.getPosition();
-    }
 
-    public Position getPosition() {
-        return position;
-    }
+//    public MazeState( MazeState m) {
+//        super(m.getStateName());
+//        this.position = m.getPosition();
+//    }
+
+//    public Position getPosition() {
+//        return position;
+//    }
 
     /**
      * @return row of the state
@@ -54,10 +51,10 @@ public class MazeState extends AState implements Serializable {
         return this.position.getColumnIndex();
     }
 
-    public String toString() {
-        if (this.position != null)
-            return "(" + this.position.getColumnIndex() + "," + this.position.getRowIndex() + ")";
-        else return "no position";
-
-    }
+//    public String toString() {
+//        if (this.position != null)
+//            return "(" + this.position.getColumnIndex() + "," + this.position.getRowIndex() + ")";
+//        else return "no position";
+//
+//    }
 }

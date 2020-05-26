@@ -1,5 +1,9 @@
 package Server;
 
+import algorithms.mazeGenerators.AMazeGenerator;
+import algorithms.mazeGenerators.EmptyMazeGenerator;
+import algorithms.mazeGenerators.MyMazeGenerator;
+import algorithms.mazeGenerators.SimpleMazeGenerator;
 import algorithms.search.ASearchingAlgorithm;
 import algorithms.search.BestFirstSearch;
 import algorithms.search.BreadthFirstSearch;
@@ -8,7 +12,7 @@ import algorithms.search.DepthFirstSearch;
 import java.io.*;
 import java.util.Properties;
 
-public class Configuration {
+public class Configurations {
     public static void main(String[] args) {
         try (OutputStream output = new FileOutputStream("resources/config.properties")) {
 
@@ -28,9 +32,28 @@ public class Configuration {
             io.printStackTrace();
         }
     }
+    public static AMazeGenerator MazeGenerateRead(){
+        AMazeGenerator returnGenerator=null;
+        try (InputStream input = new FileInputStream("resources/config.properties")) {
+            Properties prop = new Properties();
+            // load a properties file
+            prop.load(input);
+            // get the property value and print it out
+            String generatorType=prop.getProperty("AlgorithmToBuild");
+            if(generatorType.equals("EmptyMaze"))
+                returnGenerator=new EmptyMazeGenerator();
+            else if(generatorType.equals("SimpleMaze"))
+                returnGenerator=new SimpleMazeGenerator();
+            else
+                returnGenerator=new MyMazeGenerator();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        return returnGenerator;
+    }
         public static int readNumOfThreads(){
             int returnProp=-1;
-            try (InputStream input = new FileInputStream("C:\\Users\\ayalon\\Desktop\\tichnut3\\partAdani\\ATP-Project-PartA-311286397-303031686\\resources\\config.properties")) {
+            try (InputStream input = new FileInputStream("resources/config.properties")) {
 
                 Properties prop = new Properties();
 
