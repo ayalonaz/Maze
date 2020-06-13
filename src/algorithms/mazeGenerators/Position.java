@@ -43,19 +43,5 @@ public class Position implements Serializable {
         return "{"+ this.getRowIndex()+","+ this.getColumnIndex()+"}";
     }
 
-    public void setRowPosition(int rowPosition) {
-        this.rowPosition = rowPosition;
-    }
 
-    public void setColPosition(int colPosition) {
-        this.colPosition = colPosition;
-    }
-
-    public int getRowPosition() {
-        return rowPosition;
-    }
-
-    public int getColPosition() {
-        return colPosition;
-    }
 }

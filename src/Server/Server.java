@@ -1,3 +1,7 @@
+
+
+
+
 package Server;
 
 import java.io.FileInputStream;
@@ -18,35 +22,16 @@ public class Server {
     private IServerStrategy serverStrategy;
     private volatile boolean stop;
     private int interval;
-//    private ExecutorService threadPoolExecutor;
-//    private int threads;
 
     public Server(int port,int interval, IServerStrategy serverStrategy) {
         this.port = port;
         this.serverStrategy = serverStrategy;
         this.stop =false;
         this.interval = interval;
-
-//        this.threads = 5;
-//        try (InputStream input = new FileInputStream("resources/config.properties")) {
-//            Properties prop = new Properties();
-//            prop.load(input);
-//            threads = Integer.parseInt(prop.getProperty("threads"));
-//        } catch (IOException ex) {
-//            ex.printStackTrace();
-//        }
-//
-//        ExecutorService executor = Executors.newFixedThreadPool(threads);
-//        this.threadPoolExecutor = (ThreadPoolExecutor) executor;
-
     }
     public void start(){
         new Thread(this::runServer).start();
     }
-
-
-
-
     public void runServer(){
         try{
             ServerSocket serverSocket=new ServerSocket(port);
@@ -64,8 +49,6 @@ public class Server {
 
                  System.out.println("Socket Timeout - No clients pending!");
              }
-
-
          }
          executorService.shutdown();
          executorService.awaitTermination(5, TimeUnit.MINUTES);
@@ -75,15 +58,7 @@ public class Server {
             e.printStackTrace();
         }
     }
-//    private void handleClinet(Socket clientSocket){
-//        try {
-//            serverStrategy.ServerStrategy(clientSocket.getInputStream(), clientSocket.getOutputStream());
-//            clientSocket.close();
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
+
 
     private void setServerStrategy(InputStream in,OutputStream out,Socket client){
         try {

@@ -17,7 +17,7 @@ public void ServerStrategy(InputStream fromClient, OutputStream ToClient){
      int[] mazeSize=(int[])FromClient.readObject();
 
         AMazeGenerator my_maze=Configurations.MazeGenerateRead();
-        Maze theMaze=my_maze.generate(mazeSize[1],mazeSize[0]);
+        Maze theMaze=my_maze.generate(mazeSize[0],mazeSize[1]);
         ByteArrayOutputStream out=new ByteArrayOutputStream();
         MyCompressorOutputStream output=new MyCompressorOutputStream(out);
         output.write(theMaze.toByteArray());

@@ -8,12 +8,21 @@ public class Client {
     private int port;
     private IClientStrategy strategy;
 
+    /**
+     *
+     * @param SIP
+     * @param SPort
+     * @param CStrategy
+     */
     public Client(InetAddress SIP,int SPort,IClientStrategy CStrategy){
         this.ip=SIP;
         this.port=SPort;
         this.strategy=CStrategy;
     }
 
+    /**
+     *
+     */
     public void communicateWithServer(){
         try {
             Socket server = new Socket(ip,port);

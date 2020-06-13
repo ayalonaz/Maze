@@ -19,9 +19,9 @@ public class Configurations {
             Properties prop = new Properties();
 
             // set the properties value
-            prop.setProperty("NumOfThreads", "5");
-            prop.setProperty("AlgorithmToSolve", "BestFirstSearch");
-
+            prop.setProperty("threads", "5");
+            prop.setProperty("searchAlgorithm", "BestFirstSearch");
+            prop.setProperty("generator","MyMazeGenerator");
 
             // save properties to project root folder
             prop.store(output, null);
@@ -33,16 +33,16 @@ public class Configurations {
         }
     }
     public static AMazeGenerator MazeGenerateRead(){
-        AMazeGenerator returnGenerator=null;
+        AMazeGenerator returnGenerator=new MyMazeGenerator();
         try (InputStream input = new FileInputStream("resources/config.properties")) {
             Properties prop = new Properties();
             // load a properties file
             prop.load(input);
             // get the property value and print it out
-            String generatorType=prop.getProperty("AlgorithmToBuild");
-            if(generatorType.equals("EmptyMaze"))
+            String generatorType=prop.getProperty("generator");
+            if(generatorType.equals("EmptyMazeGenerator"))
                 returnGenerator=new EmptyMazeGenerator();
-            else if(generatorType.equals("SimpleMaze"))
+            else if(generatorType.equals("SimpleMazeGenerator"))
                 returnGenerator=new SimpleMazeGenerator();
             else
                 returnGenerator=new MyMazeGenerator();
@@ -52,7 +52,7 @@ public class Configurations {
         return returnGenerator;
     }
         public static int readNumOfThreads(){
-            int returnProp=-1;
+            int returnProp=5;
             try (InputStream input = new FileInputStream("resources/config.properties")) {
 
                 Properties prop = new Properties();
@@ -61,7 +61,7 @@ public class Configurations {
                 prop.load(input);
 
                 // get the property value and print it out
-                returnProp=Integer.valueOf(prop.getProperty("NumOfThreads"));
+                returnProp=Integer.valueOf(prop.getProperty("threads"));
 
 
 
@@ -73,16 +73,16 @@ public class Configurations {
 
 
     public static ASearchingAlgorithm SolvingAlgorithmRead(){
-        ASearchingAlgorithm returnAlgorithm=null;
+        ASearchingAlgorithm returnAlgorithm = new DepthFirstSearch();
         try (InputStream input = new FileInputStream("resources/config.properties")) {
             Properties prop = new Properties();
             // load a properties file
             prop.load(input);
             // get the property value and print it out
-            String algorithmType=prop.getProperty("AlgorithmToSolve");
-            if(algorithmType.equals("DFS"))
-                returnAlgorithm=new DepthFirstSearch();
-            else if(algorithmType.equals("BFS"))
+            String algorithmType=prop.getProperty("searchAlgorithm");
+            if(algorithmType.equals("BestFirstSearch"))
+                returnAlgorithm=new BestFirstSearch();
+            else if(algorithmType.equals("BreadthFirstSearch"))
                 returnAlgorithm=new BreadthFirstSearch();
             else
                 returnAlgorithm=new BestFirstSearch();
